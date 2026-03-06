@@ -22,20 +22,15 @@ html.lenis,html.lenis body{height:auto}
 ::-webkit-scrollbar-thumb{background:rgba(var(--rf-primary-rgb),0.3)}
 *{scrollbar-width:thin;scrollbar-color:rgba(var(--rf-primary-rgb),0.3) rgba(0,0,0,0.2)}
 
-/* === HIDE V58 ELEMENTS === */
-.rf-noise-overlay,.rf-immersive-overlay,.rf-immersive-btn,.rf-page-laser,.rf-pl-laser,.rf-fx-row,.rf-fx-sub,.rf-pl-mode,.ascii-ekg-container,.rf-player-spacer{display:none !important}
+/* === HIDE UNUSED ELEMENTS === */
+.rf-noise-overlay,.rf-immersive-overlay,.rf-immersive-btn,.rf-page-laser,.rf-pl-laser,.rf-fx-row,.rf-fx-sub,.rf-pl-mode,.ascii-ekg-container,.rf-player-spacer,.station-brand,.now-playing-info,.radio-player-main,.progress-container,.player-controls-container,.player-header,.volume-control-right,.playlist-arrow,.item-number,.volume-slider-right,.listening-prefix,.listening-content,.playlist-toggle-header,.rf-beam-line,.div_block_animation,.section_logo{display:none !important}
 .rf-player-float{position:relative !important;top:auto !important;left:auto !important;transform:none !important;pointer-events:auto !important;padding:0 !important;max-width:900px;margin:0 auto}
 .rf-player-float>*{pointer-events:auto}
-.rf-holo-el{animation:none !important}
 
 /* Utility */
 .rf-hidden{display:none !important}
 
-/* === HIDE ORIGINAL PLAYER ELEMENTS === */
-.station-brand,.now-playing-info,.radio-player-main,.progress-container,.player-controls-container,.player-header,.volume-control-right{display:none !important}
-.playlist-arrow,.item-number,.volume-slider-right{display:none !important}
 .section_stream_audio,.section_stream_audio .w-embed{overflow:visible !important;height:auto !important}
-.player-btn::before,.play-btn::before,.volume-control-right span::before,.playlist-arrow::before{content:none !important}
 
 /* === TOP SECTION === */
 .rf-top-section{width:100%;max-width:900px;margin:0 auto 4px;box-sizing:border-box}
@@ -43,8 +38,6 @@ html.lenis,html.lenis body{height:auto}
 /* === LISTENING MARQUEE (Terminal Typing) === */
 .listening-marquee-container{width:100%;max-width:100%;padding:0;position:relative;overflow:hidden;background:transparent;border:none;height:26px;box-sizing:border-box}
 .listening-marquee{display:flex;align-items:center;white-space:nowrap;font-family:'VT323',monospace;font-size:15px;letter-spacing:1px;height:100%;position:relative;z-index:4}
-.listening-prefix{display:none !important}
-.listening-content{display:none !important}
 .rf-mq-term{flex:1;font-family:'VT323',monospace;font-size:15px;color:rgba(var(--rf-primary-rgb),0.65);text-shadow:0 0 4px rgba(var(--rf-primary-rgb),0.4);padding:2px 15px;white-space:nowrap;overflow:hidden;line-height:1.2;position:relative;display:block;height:100%;box-sizing:border-box}
 .rf-mq-inner{display:inline}
 .rf-mq-cursor{color:var(--rf-primary);animation:cursor-blink 1s step-end infinite}
@@ -76,7 +69,6 @@ html.lenis,html.lenis body{height:auto}
 
 /* === PLAYLIST === */
 .playlist-section-wrapper{width:100%;max-width:900px;margin:0 auto 20px;position:relative;background:transparent;border:none;padding:0 15px 0 0;overflow:hidden;box-sizing:border-box}
-.playlist-toggle-header{display:none !important}
 .playlist-dropdown-content{border:none;padding:0;max-height:0;overflow:hidden;opacity:0;transition:max-height 0.5s cubic-bezier(0.4,0,0.2,1),opacity 0.35s ease;position:relative;z-index:5;scroll-behavior:smooth}
 .playlist-dropdown-content.open{max-height:560px;opacity:1;overflow-y:hidden;overflow-x:clip;transition:max-height 0.6s cubic-bezier(0.4,0,0.2,1),opacity 0.3s ease;padding-top:25px;scroll-snap-type:none}
 .playlist-dropdown-content::-webkit-scrollbar{display:none}
@@ -137,15 +129,12 @@ html.lenis,html.lenis body{height:auto}
 .rf-vu-content{position:relative;z-index:4}
 .rf-vu-canvas{width:100%;height:200px;display:block;background:transparent;border:none;image-rendering:pixelated;image-rendering:crisp-edges;margin:0;position:relative;z-index:4}
 
-/* === BEAM LINE (hidden) === */
-.rf-beam-line{display:none !important}
 
 /* Canvas optimization */
 .rf-vu-canvas,.rf-cp-cvs,.rf-prg-line canvas{will-change:contents;contain:layout style paint}
 .rf-bio-marquee,.listening-marquee-container{contain:content}
 
 /* === ANIMATION BACKGROUND — CSS-only via pseudo-element, no DOM overlay === */
-.div_block_animation{display:none !important}
 .playlist-section-wrapper.open::after{content:'' !important;position:absolute;top:0;left:0;right:0;bottom:0;z-index:0;pointer-events:none;background:url('https://cdn.prod.website-files.com/6991be60a189f8b3d37a41ec/6991be60a189f8b3d37a4224_RF-LOGOTYPE-WEB-001.1_WHITE.avif') no-repeat center 40%/65% auto;opacity:0.3;transform:perspective(500px) rotateY(-25deg) rotateX(12deg) rotateZ(3deg) scale(1.2);transform-origin:50% 40%;filter:brightness(2.4) contrast(1.5) drop-shadow(0 0 25px rgba(var(--rf-primary-rgb),0.3)) drop-shadow(0 0 60px rgba(var(--rf-primary-rgb),0.1));mask-image:radial-gradient(ellipse 90% 80% at 50% 40%,rgba(0,0,0,1) 0%,rgba(0,0,0,0.5) 40%,rgba(0,0,0,0.1) 75%,rgba(0,0,0,0) 100%);-webkit-mask-image:radial-gradient(ellipse 90% 80% at 50% 40%,rgba(0,0,0,1) 0%,rgba(0,0,0,0.5) 40%,rgba(0,0,0,0.1) 75%,rgba(0,0,0,0) 100%)}
 
 /* === TRANSMISSIONS (Video Section) === */
@@ -175,8 +164,6 @@ html.lenis,html.lenis body{height:auto}
 .w-embed-youtubevideo,.cell-video-items .w-video.w-embed{position:relative !important;padding-top:56.25% !important;width:100% !important}
 .w-embed-youtubevideo iframe,.cell-video-items .w-video iframe,.cell-video-items .w-embed iframe{position:absolute !important;top:0;left:0;width:100% !important;height:100% !important}
 
-/* === LOGO (hidden) === */
-.section_logo{display:none !important}
 
 /* === FOOTER === */
 .section_footer{font-family:'VT323',monospace;margin-top:30px !important;padding-top:0 !important}
@@ -206,7 +193,7 @@ body.rf-playing .rf-cp-el,body.rf-playing .rf-cp-rem{color:rgba(var(--rf-primary
 body.rf-playing .rf-cp-btn{color:rgba(var(--rf-primary-rgb),0.75)}
 
 /* Kill V58 pseudo-element overlays */
-.rf-vu-section::before,.rf-vu-section::after,.listening-marquee-container::before,.listening-marquee-container::after,.player-header::before,.player-header::after,.player-controls-container::before,.player-controls-container::after,.playlist-section-wrapper::before,.playlist-section-wrapper::after,.rf-bio-marquee::before,.rf-bio-marquee::after{content:none !important}
+.rf-vu-section::before,.rf-vu-section::after,.listening-marquee-container::before,.listening-marquee-container::after,.playlist-section-wrapper::before,.playlist-section-wrapper::after,.rf-bio-marquee::before,.rf-bio-marquee::after{content:none !important}
 
 /* === RESPONSIVE — 768px (Tablet) === */
 /* Scale: headers 16px, content 14px, support 12px */
